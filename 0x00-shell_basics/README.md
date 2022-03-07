@@ -1,16 +1,16 @@
-
+# Write a script that prints the absolute path name of the current working directory.
 # Display the contents list of your current directory.
-# Write a script that changes the working directory to the users home directory.
+# Write a script that changes the working directory to the user’s home directory.
 # Display current directory contents in a long format
 # Display current directory contents, including hidden files (starting with .). Use the long format
 # Display current directory contents.
-#   Long format
-#   with user and group IDs displayed numerically
-#   And hidden files (starting with .)
-# Create a script that creates a directory named holberton in the /tmp/ directory.
-# Move the file betty from /tmp/ to /tmp/holberton.
+-  Long format
+-  with user and group IDs displayed numerically
+-  And hidden files (starting with .)
+# Create a script that creates a directory named my_first_directory in the /tmp/ directory.
+# Move the file betty from /tmp/ to /tmp/my_first_directory.
 # Delete the file betty.
-# Delete the directory holberton that is in the /tmp directory.
+# Delete the directory my_first_directory that is in the /tmp directory.
 # Write a script that changes the working directory to the previous one.
 # Write a script that lists all files (even ones with names beginning with a period character, which are normally hidden)
 # in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
@@ -21,7 +21,7 @@
 # of the working directory. You can consider that all HTML files have the extension .html
 # Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u.
 # Create a script that deletes all files in the current working directory that end with the character ~.
-# Create a script that creates the directories welcome/, welcome/to/ and welcome/to/holberton in the current directory.
+# Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
 # Write a command that lists all the files and directories of the current directory, separated by commas (,).
 #    Directory names should end with a slash (/).
 #    Files and directories starting with a dot (.) should be listed
@@ -29,6 +29,6 @@
 #    Only digits and letters are used to sort; Digits should come first
 #    You can assume that all the files we will test with will have at least one letter or one digit
 #    The listing should end with a new line# Write a script that prints the absolute path name of the current working directory.
-=======
+# Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0.
 
 

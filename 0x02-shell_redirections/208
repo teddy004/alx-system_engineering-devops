@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="google" content="notranslate">
+
+    <title>Sessions - new | Intranet</title>
+
+      <link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
+      <link rel="stylesheet" media="all" href="/assets/application_alx-9020cb7b0d10dc713ed9a9f88c159db691795f9b05ea49ecca1212c43cdf58b7.css" />
+      <script src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="/assets/application-f3db94b7217246f18ecad513e093ee6e16c23f1e29561e795fa79b7875970dff.js"></script>
+      <link rel="shortcut icon" type="image/x-icon" href="/favicon_alx.ico" />
+      <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ZTHOdiwWE3f6IAstTcUDuX21Gb+0vqSh1Q6gc/+ysdeT1PkO1+fDJqX4wdAW2OshPxX8FQwkAD4Uvmsy+E+W5Q==" />
+
+      <link rel="apple-touch-icon" href="/apple-touch-icon_alx.png">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- Store user timezone -->
+      <script>
+        Cookies.set('timezone', (new Date()).getTimezoneOffset() / -60.0);
+      </script>
+
+      <!-- intro.js for interactive onboarding -->
+
+      <!-- React -->
+      <script src="/packs/js/application-29905e6b398dec7aea82.js"></script>
+      <link rel="stylesheet" media="screen" href="/packs/css/application-f61adf9f.css" />
+
+  </head>
+
+  <body class="
+    
+    env_production
+    
+    "
+    translate="no"
+    class="notranslate"
+    data-theme-suffix="_alx"
+    data-checker-special-theme="">
+
+
+    <main>
+      <div id="layout-bars">
+        
+
+        
+
+        
+
+        
+      </div>
+
+      <article class="">
+
+        <div class="logged_out_form">
+
+  <h2 class="hbtn_logo">
+  </h2>
+
+  <form class="sm-gap" id="new_user" action="/auth/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ef2B8GQuX6pcJ0/7Va7kMNoaHZHR1vCb15iC9pmv2Xx2LlK1bvKQtrW9Md8T1zKuuey50IOOx5raRoGqMlmfxQ==" />
+
+
+    <div class="field">
+      <label class="control-label" for="user_login">Email</label><br>
+      <input autofocus="autofocus" class="form-control" type="text" name="user[login]" id="user_login" />
+    </div>
+
+    <div class="field">
+      <label class="control-label" for="user_password">Password</label><br>
+      <input autocomplete="off" class="form-control" type="password" name="user[password]" id="user_password" />
+    </div>
+
+      <div class="field">
+        <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+        <label class="control-label" for="user_remember_me">Remember me</label>
+      </div>
+
+    <div class="actions">
+      <input type="submit" name="commit" value="Log in" class="btn btn-primary" data-disable-with="Log in" />
+    </div>
+</form>
+  <ul id="devise_links" class="gap">
+
+
+
+    <li>
+      <a href="/auth/password/new">Forgot your password?</a>
+    </li>
+
+
+    <li>
+      <!--<a href="/auth/unlock/new">Didn&#39;t receive unlock instructions?</a>-->
+    </li>
+
+
+  <!--
+  <li>
+    <a href="https://aka.ms/ssprsetup">Forgot your password?</a>
+  </li>
+  -->
+</ul>
+
+
+</div>
+
+
+      </article>
+
+      <div class="copyright">Copyright © 2022 ALX, All rights reserved.</div>
+    </main>
+
+
+
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create',
+            'UA-67152800-9',
+            'auto');
+
+        ga('send', 'pageview');
+
+        $(document).ready(function() {
+          ga(function(tracker) {
+            var clientId = tracker.get('clientId');
+            $('.ga-client-id').val(clientId);
+          });
+        });
+      </script>
+
+
+
+
+
+
+  </body>
+</html>

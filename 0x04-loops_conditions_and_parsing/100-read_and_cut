@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this script displays the content of the file /etc/passwd
+
+while x=":" read -r FILE
+do
+echo "$FILE" | cut -d":" -f1,3,6
+done </etc/passwd

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# traps signals and creates a file containing its pid
+true=0
+echo $BASHPID > /var/run/myscript.pid
+trap 'echo "I hate the kill command"; rm /var/run/myscript.pid; exit 0;' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm /var/run/myscript.pid; exit 0;' SIGQUIT
+while [ $true ]; do
+	echo 'To infinity and beyond'
+	sleep 2
+done;

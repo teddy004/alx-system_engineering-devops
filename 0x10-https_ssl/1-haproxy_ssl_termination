@@ -24,7 +24,7 @@ frontend www-http
    default_backend www-backend
 
 frontend www-https
-   bind   0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.topsentaa.tech/all.pem
+   bind   0.0.0.0:443 ssl crt /etc/letsencrypt/live/www.teddy.tech/all.pem
    reqadd X-Forwarded-Proto:\ https
    acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
    use_backend letsencrypt-backend if letsencrypt-acl
@@ -33,8 +33,8 @@ frontend www-https
 backend www-backend
    balance  roundrobin
    redirect scheme https if !{ ssl_fc }
-   server 1329-web-01 34.73.127.101:80 check
-   server 1329-web-02 18.205.59.182:80 check
+   server 3593-web-01 44.210.83.85:80 check
+   server 3593-web-02 3.236.84.6:80 check
 
 backend letsencrypt-backend
    server letsencrypt 127.0.0.1:54321

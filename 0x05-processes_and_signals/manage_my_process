@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# This script is doing a lot of things.
-
-while true; do
-	echo "I am alive!" >>/tmp/my_process
-	sleep 2
+# Writes a string to a file indefinitely
+while [[ 1 -eq 1 ]]; do
+  echo "I am alive!" >> /tmp/my_process
+  sleep 2
 done

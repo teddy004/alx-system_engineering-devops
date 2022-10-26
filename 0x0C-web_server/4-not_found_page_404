@@ -3,10 +3,10 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-mkdir -p /var/www/html /var/www/error
-chmod -R 755 /var/www
-echo 'Hello World!' > /var/www/html/index.html
-echo -e "Ceci n\x27est pas une page" > /var/www/error/404.html
+sudo mkdir -p /var/www/html /var/www/error
+sudo chmod -R 755 /var/www
+sudo echo 'Hello World!' > /var/www/html/index.html
+sudo echo -e "Ceci n\x27est pas une page" > /var/www/error/404.html
 # the server's configuration
 SERVER_CONFIG=\
 "server {
@@ -16,7 +16,7 @@ SERVER_CONFIG=\
 	root /var/www/html;
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name _;
+	server_name 54.221.178.201;
 
 	location / {
 		try_files \$uri \$uri/ =404;

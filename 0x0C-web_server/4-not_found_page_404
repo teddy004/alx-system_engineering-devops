@@ -1,40 +1,14 @@
 #!/usr/bin/env bash
-# Installs, configures, and starts the server
-sudo apt-get update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo mkdir -p /var/www/html /var/www/error
-sudo chmod -R 755 /var/www
-sudo echo 'Hello World!' > /var/www/html/index.html
-sudo echo -e "Ceci n\x27est pas une page" > /var/www/error/404.html
-# the server's configuration
-SERVER_CONFIG=\
-"server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+# Install Nginx, redirect and 404
 
-	root /var/www/html;
-	index index.html index.htm index.nginx-debian.html;
-
-	server_name 54.221.178.201;
-
-	location / {
-		try_files \$uri \$uri/ =404;
-	}
-
-	if (\$request_filename ~ redirect_me){
-		rewrite ^ https://sketchfab.com/bluepeno/models permanent;
-	}
-
-	error_page 404 /404.html;
-	location = /404.html {
-		root /var/www/error/;
-		internal;
-	}
-}"
-bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
-if [ "$(pgrep -c nginx)" -le 0 ]; then
-	sudo service nginx start
-else
-	sudo service nginx restart
-fi
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install nginx -y
+sudo service nginx start
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+new_string='server_name _;\n\n\trewrite \^\/redirect_me https:\/\/www.youtube.com\/watch\?v=QH2-TGUlwu4 permanent;/'
+sudo sed -i "s/server_name _;\$/${new_string}" /etc/nginx/sites-available/default
+sudo sed -i "s/^\t\}$/\t\}\n\n\terror_page 404 \/404.html;/" /etc/nginx/sites-available/default
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+sudo service nginx restart

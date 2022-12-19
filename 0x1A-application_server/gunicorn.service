@@ -1,0 +1,18 @@
+[Unit]
+Description=gunicorn.service - AirBnB clone by B3zaleel run with Gunicorn.
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/AirBnB_clone_v4/
+Environment=HBNB_MYSQL_USER=hbnb_dev
+Environment=HBNB_MYSQL_PWD=hbnb_dev_pwd
+Environment=HBNB_MYSQL_HOST=localhost
+Environment=HBNB_MYSQL_DB=hbnb_dev_db
+Environment=HBNB_TYPE_STORAGE=db
+Environment=HBNB_ENV=dev
+ExecStart=/usr/bin/gunicorn --workers 3 --error-logfile /tmp/airbnb-error.log --access-logfile /tmp/airbnb-access.log --bind 0.0.0.0:5003 web_dynamic.2-hbnb:app
+
+[Install]
+WantedBy=multi-user.target
